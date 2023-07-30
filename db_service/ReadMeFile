@@ -1,0 +1,21 @@
+submit by Amit Avital 207446410 
+	  Ofir Dabah 206464836
+	  Omer Efron 208967158
+	  
+ NOTES:
+ 1. Assuming that the script will create the database.
+ 2. Assuming that we get only integer when needed.
+ 3. Manual:
+ 	- navigate to build dir.
+ 	- run the command: "cmake .."
+ 	- run the command: "make"
+ 	- run the script: "./flightScanner.sh"
+ 	- run the main exe: "./main"
+
+4. code is divided to:
+	a. utility shared object.
+	b. execution class to execute each command.
+	c. func to run the main function, and deals with the processes.
+	d. main function.
+
+5. CMake copies the script to build for quicker run.

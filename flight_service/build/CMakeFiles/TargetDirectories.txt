@@ -1,0 +1,3 @@
+/home/efron/Desktop/task3Update/flight_service/build/CMakeFiles/main.dir
+/home/efron/Desktop/task3Update/flight_service/build/CMakeFiles/edit_cache.dir
+/home/efron/Desktop/task3Update/flight_service/build/CMakeFiles/rebuild_cache.dir
