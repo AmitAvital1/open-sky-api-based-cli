@@ -12,19 +12,19 @@ Features
     4.Utilizes CURL for HTTP requests, Libzip for data compression, and named pipes (FIFOs) for inter-container communication.
 Requirements
 
-Docker installed on the host machine.
+    Docker installed on the host machine.
 
 Installation and Usage
 
-Download the run.sh script and run it on terminal.
+    Download the run.sh script and run it on terminal.
 
 Background Data Fetching
 
-The data fetching and processing are performed in a separate container running in the background. The main container sends requests to the background container using named pipes (FIFOs). The background container fetches the data from the OpenSky API and compresses it using Libzip before sending it back to the main container.
-Contributing
+    The data fetching and processing are performed in a separate container running in the background. The main container sends requests to the background container using named pipes (FIFOs). The background container fetches the data from the OpenSky API and compresses it using Libzip before sending it back to the main container.
+    Contributing
 
 Contributions to this project are welcome. If you find a bug or have a feature suggestion, please open an issue on GitHub. Feel free to fork this repository and submit a pull request with your improvements.
 
 Acknowledgments
 
-This project was inspired by the OpenSky API, which provides valuable real-time flight data.
+    This project was inspired by the OpenSky API, which provides valuable real-time flight data.
