@@ -1,9 +1,15 @@
-# open-sky-api
+# Flight DB
 
 Flight Data API using OpenSky API
 Description
 
-This project is an API that fetches and sends data about flights from all over the world using the OpenSky API. It provides users with a simple command-line interface to interact with the API and retrieve flight data. The API is designed to run in a Docker container for easy deployment and scalability.
+Flight Service application This project is developed in Linux OS. The objective of the project is to practice working with process creation, signals, and interprocess communication using pipes. The application is designed to be an interactive multi-process application, divided into two processes. The first process interacts with the user, while the second process performs operations on a database (DB).
+
+The program is divided into two processes:
+
+1. Main Process: This process creates a child process upon initialization and handles user input and output. When the user chooses options 1-5, the request is passed from the main process to the child process, and the result data is received from the child process.
+2. Child Process: This process receives operation codes (op-codes) from the main process, performs the required operation, and returns the data.
+
 Features
 
     1.Fetch real-time flight data from the OpenSky API.
@@ -23,29 +29,11 @@ Background Data Fetching
     The data fetching and processing are performed in a separate container running in the background. The main container sends requests to the background container using named pipes (FIFOs). The background container fetches the data from the OpenSky API and compresses it using Libzip before sending it back to the main container.
     Contributing
 
-Contributions to this project are welcome. If you find a bug or have a feature suggestion, please open an issue on GitHub. Feel free to fork this repository and submit a pull request with your improvements.
-
 Implementation Details
 
-This Flight Data API project is implemented using a combination of C and C++. The main reason for choosing these languages is their efficiency and performance, which are crucial when dealing with real-time data processing and networking tasks.
-C
+This Flight Data API project is implemented using a C++. The main reason for choosing these languages is their efficiency and performance, which are crucial when dealing with real-time data processing and networking tasks.
 
-The core functionality of the API, including the menu-driven command-line interface, inter-container communication with named pipes (FIFOs), and making HTTP requests to the OpenSky API using CURL, is implemented in C. C is well-suited for systems programming and offers low-level control, making it an excellent choice for handling low-level I/O operations and managing memory efficiently.
-C++
+Preview:
 
-C++ is utilized for data processing and manipulation tasks. The background container, responsible for fetching and processing flight data from the OpenSky API, is implemented in C++. C++'s object-oriented features, such as classes and data structures, provide a convenient way to organize and manage the flight data retrieved from the API. Additionally, C++'s standard library offers powerful data manipulation functionalities, which streamline the handling of complex data sets.
+![image](https://github.com/AmitAvital1/open-sky-api-based-cli/assets/116808245/930ce89c-e7e9-49bb-abe8-a08d6d6285fa)
 
-The combination of C and C++ in this project allows for an efficient and robust implementation. The C components handle the fundamental aspects of the API, while C++ enhances the project's data processing capabilities.
-Advantages of Using C and C++
-
-    Performance: C and C++ are known for their excellent performance and efficiency, making them ideal choices for real-time data processing and networking tasks.
-
-    Low-level Control: C allows for direct manipulation of memory and low-level I/O operations, ensuring precise control over system resources.
-
-    Object-Oriented Features: C++'s object-oriented features facilitate code organization and reusability, making it easier to manage and process the retrieved flight data.
-
-    Standard Libraries: Both C and C++ come with robust standard libraries that offer a wide range of functionalities, reducing the need for external dependencies.
-
-Acknowledgments
-
-    This project was inspired by the OpenSky API, which provides valuable real-time flight data.
